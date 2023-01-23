@@ -6,30 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Luke Zeng - Portfolio</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/aos.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <style>
+        @keyframes fungaming {
+            0% {
+                filter: grayscale(25%);
+            }
+
+            25% {
+                filter: grayscale(75%);
+            }
+
+            50% {
+                filter: grayscale(75%);
+            }
+
+            100% {
+                filter: grayscale(25%);
+            }
+        }
+
+        #broanimation {
+            animation-name: fungaming;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+        }
+
+        #no {
+            filter: brightness(100%);
+        }
+    </style>
 </head>
 
 <body id="page-top">
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Brand</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Luke Zeng</a><button
+                data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+                type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
+                    class="fa fa-align-justify"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Welcome</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="text-center text-white d-flex masthead" style="background-image:url('assets/img/coolnow.png');">
-        <div class="container my-auto">
+    <header class="text-center text-white d-flex masthead" style="background-image:url('assets/img/coolnow.jpg');"
+        id="broanimation">
+        <div class="container my-auto" id="no">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <h1 class="text-uppercase"><strong>Luke Zeng</strong></h1>
@@ -37,55 +69,55 @@
                 </div>
             </div>
             <div class="col-lg-8 mx-auto">
-                <p class="text-faded mb-5">We can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#services">Find Out More</a>
+                <p class="text-faded mb-5 bg-dark">A dedicated, curious, and hardworking student with a strong passion
+                    for math and science. </p><a class="btn btn-dark btn-xl js-scroll-trigger" role="button"
+                    href="#services">See Projects</a>
             </div>
         </div>
     </header>
-    <section class="bg-primary" id="about">
+    <section class="bg-dark" id="about">
         <div class="container">
             <div class="row">
                 <div class="col offset-lg-8 text-center mx-auto">
-                    <h2 class="text-white section-heading">We've got what you need!</h2>
+                    <h2 class="text-white section-heading">About Me</h2>
                     <hr class="light my-4">
-                    <p class="text-faded mb-4">Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes are open source, free to download, and easy to use. No strings attached!</p><a class="btn btn-light btn-xl js-scroll-trigger" role="button" href="#services">Get Started!</a>
+                    <p class="text-faded mb-4">
+                        Hello! My name is Luke Zeng and I am currently a junior at Dublin High School. I am passionate
+                        about technology, mathematics, and programming, and I am eager to find a career where I can
+                        apply these interests. Problem-solving is a critical component of all these subjects, and I have
+                        had the opportunity to develop these skills through various online competitions such as the USA
+                        Computing Olympiad, Google's Kickstart and Code Jam, Leetcode, and Codeforces.
+                        With the time and effort I have invested in these activities, I have achieved success. I am now
+                        competing in the platinum division of the USACO, the highest division, and I have an elo rating
+                        in the top 5% on the Leetcode platform. I have also participated in Capture the Flag (CTF)
+                        events, where I achieved a spot in the top 100 US high school teams in a competition with
+                        several thousand teams. Furthermore, I have participated in various student-led hackathons,
+                        where I received an award for the best educational project.
+                    </p>
+                    <p class="text-faded mb-4">
+                        I am also passionate about STEM within my high school curriculum. I try to challenge myself by
+                        taking many relatively advanced courses such as AP Statistics, AP Calculus, AP Chemistry, and AP
+                        Computer Science A. I
+                        believe that challenging yourself is the best way to improve, which is why I strive to take the
+                        most difficult classes available to me in my field of study.
+                    </p>
+                    <p class="text-faded mb-4">
+                        I am a hardworking student with a 4.67 weighted GPA in my sophomore year and a 4.83 in the first
+                        semester of my junior year, with a 4.0 unweighted GPA in both. I am always looking for
+                        opportunities to learn more about my interests and improve my skills, whether it be through
+                        studying, doing algorithmic problems or other forms of work.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="services">
+    <section id="services" class="bg-dark text-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
-                    <hr class="my-4">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="mx-auto service-box mt-5"><i class="fa fa-diamond fa-4x text-primary mb-3 sr-icons" data-aos="zoom-in" data-aos-duration="200" data-aos-once="true"></i>
-                        <h3 class="mb-3">Sturdy Templates</h3>
-                        <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="mx-auto service-box mt-5"><i class="fa fa-paper-plane fa-4x text-primary mb-3 sr-icons" data-aos="zoom-in" data-aos-duration="200" data-aos-delay="200" data-aos-once="true"></i>
-                        <h3 class="mb-3">Ready to Ship</h3>
-                        <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="mx-auto service-box mt-5"><i class="fa fa-newspaper-o fa-4x text-primary mb-3 sr-icons" data-aos="zoom-in" data-aos-duration="200" data-aos-delay="400" data-aos-once="true"></i>
-                        <h3 class="mb-3">Up to Date</h3>
-                        <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="mx-auto service-box mt-5"><i class="fa fa-heart fa-4x text-primary mb-3 sr-icons" data-aos="fade" data-aos-duration="200" data-aos-delay="600" data-aos-once="true"></i>
-                        <h3 class="mb-3">Made with Love</h3>
-                        <p class="text-muted mb-0">You have to make your websites with love these days!</p>
-                    </div>
+                    <h2 class="section-heading">Projects</h2>
+                    <hr class=" light my-4">
+                    <p>Below are some of the projects that I have worked/am currently working on.</p>
                 </div>
             </div>
         </div>
@@ -93,77 +125,43 @@
     <section id="portfolio" class="p-0">
         <div class="container-fluid p-0">
             <div class="row no-gutters popup-gallery">
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/1.jpg"><img class="img-fluid" src="assets/img/thumbnails/1.jpg">
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/thumbnails/1.png"><img
+                            class="img-fluid" src="assets/img/thumbnails/1.png">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
+                                <div class="project-category text-faded"><span>Hackathon Project</span></div>
+                                <div class="project-name"><span>The Physical Engine</span></div>
                             </div>
                         </div>
                     </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/2.jpg"><img class="img-fluid" src="assets/img/thumbnails/2.jpg">
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/thumbnails/2.png"><img
+                            class="img-fluid" src="assets/img/thumbnails/2.png">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
+                                <div class="project-category text-faded"><span>Hackathon Project</span></div>
+                                <div class="project-name"><span>FactorEyes</span></div>
                             </div>
                         </div>
                     </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/3.jpg"><img class="img-fluid" src="assets/img/thumbnails/3.jpg">
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/thumbnails/3.png"><img
+                            class="img-fluid" src="assets/img/thumbnails/3.png">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
-                            </div>
-                        </div>
-                    </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/4.jpg"><img class="img-fluid" src="assets/img/thumbnails/4.jpg">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
-                            </div>
-                        </div>
-                    </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/5.jpg"><img class="img-fluid" src="assets/img/thumbnails/5.jpg">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
-                            </div>
-                        </div>
-                    </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/6.jpg"><img class="img-fluid" src="assets/img/thumbnails/6.jpg">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded"><span>Category</span></div>
-                                <div class="project-name"><span>Project Name</span></div>
+                                <div class="project-category text-faded"><span>2D Platformer Game</span></div>
+                                <div class="project-name"><span>HyperJump</span></div>
                             </div>
                         </div>
                     </a></div>
             </div>
         </div>
     </section>
-    <section class="text-white bg-dark">
-        <div class="container text-center">
-            <h2 class="mb-4">Lorem Ipsum!</h2><a class="btn btn-light btn-xl sr-button" role="button" data-aos="zoom-in" data-aos-duration="400" data-aos-once="true" href="#">Download Now!</a>
-        </div>
-    </section>
-    <section id="contact">
+    <section id="contact" class = "bg-dark text-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 text-center mx-auto">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="my-4">
-                    <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 text-center ml-auto"><i class="fa fa-phone fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true"></i>
-                    <p>123-456-6789</p>
-                </div>
-                <div class="col-lg-4 text-center mr-auto"><i class="fa fa-envelope-o fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true"></i>
-                    <p><a href="mailto:your-email@your-domain.com">email@example.com</a></p>
+                    <h2 class="section-heading">Contact Information:</h2>
+                    <hr class="light my-4">
+                    <p class="mb-5">The best way to contact me would be through email: zenglukef@gmail.com</p>
                 </div>
             </div>
         </div>
