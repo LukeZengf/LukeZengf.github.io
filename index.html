@@ -41,7 +41,46 @@
         #no {
             filter: brightness(100%);
         }
+        
+        .in-viewport{
+            animation: fade-in;
+            animation-duration: 0.75s;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function(){
+            const target = Array.from(document.querySelectorAll('section'));
+
+            function handleIntersection(entries) {
+                entries.map((entry) => {
+                    if (entry.isIntersecting) {
+                        console.log("cool");
+                        entry.target.classList.add('in-viewport');
+                    }
+                    else{
+                        entry.target.classList.remove('in-viewport');
+                    }
+                });
+            }
+
+            const observer = new IntersectionObserver(handleIntersection);
+
+            target.forEach(test=>{observer.observe(test)});
+  
+  
+        });
+
+    </script>
 </head>
 
 <body id="page-top">
@@ -60,25 +99,27 @@
             </div>
         </div>
     </nav>
-    <header class="text-center text-white d-flex masthead" style="background-image:url('assets/img/coolnow.jpg');"
-        id="broanimation">
-        <div class="container my-auto" id="no">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h1 class="text-uppercase"><strong>Luke Zeng</strong></h1>
-                    <hr>
+    <section class="bg-primary" style="margin: 0; padding: 0;">
+        <header class="text-center text-white d-flex masthead" style="background-image:url('assets/img/coolnow.jpg');"
+            id="broanimation">
+            <div class="container my-auto" id="no">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <h1 class="text-uppercase"><strong>Luke Zeng</strong></h1>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col-lg-8 mx-auto">
+                    <p class="text-faded mb-5 bg-dark">A dedicated, curious, and hardworking student with a strong passion
+                        for math and science. </p><a class="btn btn-dark btn-xl js-scroll-trigger" role="button"
+                        href="#services">See Projects</a>
                 </div>
             </div>
-            <div class="col-lg-8 mx-auto">
-                <p class="text-faded mb-5 bg-dark">A dedicated, curious, and hardworking student with a strong passion
-                    for math and science. </p><a class="btn btn-dark btn-xl js-scroll-trigger" role="button"
-                    href="#services">See Projects</a>
-            </div>
-        </div>
-    </header>
+        </header>
+    </section>
     <section class="bg-primary" id="about">
         <div class="container">
-            <div class="row">
+            <div class="row" id ="texting">
                 <div class="col offset-lg-8 text-center mx-auto">
                     <h2 class="text-light section-heading">About Me</h2>
                     <hr class="light my-4">
