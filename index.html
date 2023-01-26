@@ -41,6 +41,13 @@
         #no {
             filter: brightness(100%);
         }
+
+        .not-in-viewport{
+            opacity: 0;
+            animation: fade-out;
+            animation-duration: 0.75s;
+            animation-iteration-count: 1;
+        }
         
         .in-viewport{
             animation: fade-in;
@@ -56,6 +63,14 @@
                 opacity: 1;
             }
         }
+        @keyframes fade-out {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
     </style>
     <script defer>
         document.addEventListener("DOMContentLoaded", function(){
@@ -63,17 +78,24 @@
 
             function handleIntersection(entries) {
                 entries.map((entry) => {
-                    if (entry.isIntersecting) {
+                    if (entry.intersectionRatio >= 0.1) {
                         console.log("cool");
+                        console.log(entry.intersectionRatio);
+                        entry.target.classList.remove('not-in-viewport');
                         entry.target.classList.add('in-viewport');
                     }
                     else{
+                        entry.target.classList.add('not-in-viewport');
                         entry.target.classList.remove('in-viewport');
                     }
                 });
             }
+            
+            const options = {
+                threshold: [0.0,0.2]
+            };
 
-            const observer = new IntersectionObserver(handleIntersection);
+            const observer = new IntersectionObserver(handleIntersection, options);
 
             target.forEach(test=>{observer.observe(test)});
   
@@ -159,12 +181,12 @@
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Projects</h2>
                     <hr class=" light my-4">
-                    <p>Below are some of the projects that I have worked/am currently working on. You are free to contact me anytime in order to learn more about them.</p>
+                    <p>Below are some of the projects that I have worked/am currently working on, listed from oldest to newest. You are free to contact me anytime in order to learn more about them.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="portfolio" class="p-0">
+    <section id="portfolio" class="p-0 bg-dark">
         <div class="container-fluid p-0">
             <div class="row no-gutters">
                 <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://devpost.com/software/the-physical-engine" target="_blank"><img
@@ -185,7 +207,7 @@
                             </div>
                         </div>
                     </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box"><img
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href = "https://github.com/workingSpear/HyperJump" target="_blank"><img
                             class="img-fluid" src="assets/img/thumbnails/3.png">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
@@ -195,6 +217,20 @@
                         </div>
                     </a></div>
             </div>
+            <div class="row no-gutters">
+                <div class="col-sm-6 col-lg-4"></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://github.com/concl/VeggieTools" target="_blank"><img
+                            class="img-fluid" src="assets/img/thumbnails/4.png">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Project</span></div>
+                                <div class="project-name"><span>VeggieTools</span></div>
+                            </div>
+                        </div>
+                    </a></div>
+                <div class="col-sm-6 col-lg-4"></div>
+            </div>
+
         </div>
     </section>
     <section id="links" class="bg-dark">
