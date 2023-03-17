@@ -42,14 +42,14 @@
             filter: brightness(100%);
         }
 
-        .not-in-viewport{
+        .not-in-viewport {
             opacity: 0;
             animation: fade-out;
             animation-duration: 0.75s;
             animation-iteration-count: 1;
         }
-        
-        .in-viewport{
+
+        .in-viewport {
             animation: fade-in;
             animation-duration: 0.75s;
             animation-iteration-count: 1;
@@ -59,21 +59,24 @@
             0% {
                 opacity: 0;
             }
+
             100% {
                 opacity: 1;
             }
         }
+
         @keyframes fade-out {
             0% {
                 opacity: 1;
             }
+
             100% {
                 opacity: 0;
             }
         }
     </style>
     <script defer>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener("DOMContentLoaded", function () {
             const target = Array.from(document.querySelectorAll('section'));
 
             function handleIntersection(entries) {
@@ -84,22 +87,22 @@
                         entry.target.classList.remove('not-in-viewport');
                         entry.target.classList.add('in-viewport');
                     }
-                    else{
-                        entry.target.classList.remove('in-viewport');
+                    else {
                         entry.target.classList.add('not-in-viewport');
+                        entry.target.classList.remove('in-viewport');
                     }
                 });
             }
-            
+
             const options = {
-                threshold: [0.0,0.2]
+                threshold: [0.0, 0.2]
             };
 
             const observer = new IntersectionObserver(handleIntersection, options);
 
-            target.forEach(test=>{observer.observe(test)});
-  
-  
+            target.forEach(test => { observer.observe(test) });
+
+
         });
 
     </script>
@@ -132,7 +135,8 @@
                     </div>
                 </div>
                 <div class="col-lg-8 mx-auto">
-                    <p class="text-faded mb-5 bg-dark">A dedicated, curious, and hardworking student with a strong passion
+                    <p class="text-faded mb-5 bg-dark">A dedicated, curious, and hardworking student with a strong
+                        passion
                         for math and science. </p><a class="btn btn-dark btn-xl js-scroll-trigger" role="button"
                         href="#services">See Projects</a>
                 </div>
@@ -141,17 +145,25 @@
     </section>
     <section class="bg-primary" id="about">
         <div class="container">
-            <div class="row" id ="texting">
+            <div class="row" id="texting">
                 <div class="col offset-lg-8 text-center mx-auto">
                     <h2 class="text-light section-heading">About Me</h2>
                     <hr class="light my-4">
                     <p class="text-faded mb-4">
-                        I am a junior at Dublin High School, passionate about technology, math, and programming. I have developed my passion for problem-solving through online competitive programming platforms such as USACO, Google's Kickstart and Code Jam, Leetcode, and Codeforces. I am currently competing in the Platinum division of USACO, have an elo rating in the top 5% on Leetcode, and have achieved a spot in the top 100 US high school teams in a CTF competition. I am always looking for opportunities to learn and improve my skills, and am also excited about the opportunity to meet and collaborate with other motivated and talented people.
+                        I am a junior at Dublin High School, passionate about technology, math, and programming. I have
+                        developed my passion for problem-solving through online competitive programming platforms such
+                        as USACO, Google's Kickstart and Code Jam, Leetcode, and Codeforces. I am currently competing in
+                        the Platinum division of USACO, have an elo rating in the top 5% on Leetcode, and have achieved
+                        a spot in the top 100 US high school teams in a CTF competition. I am always looking for
+                        opportunities to learn and improve my skills, and am also excited about the opportunity to meet
+                        and collaborate with other motivated and talented people.
                     </p>
-                    <p class="text-faded mb-4">
-                        I hope to use my skills to solve problems and make a positive impact on society, and also to contribute
+                    <p>
+                        I hope to use my skills to solve problems that have a positive impact on society, and also to
+                        contribute
                         meaningfully to the collective knowledge of humanity.
                     </p>
+
                 </div>
             </div>
         </div>
@@ -171,8 +183,9 @@
     <section id="portfolio" class="p-0 bg-dark">
         <div class="container-fluid p-0">
             <div class="row no-gutters">
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://devpost.com/software/the-physical-engine" target="_blank"><img
-                            class="img-fluid" src="assets/img/thumbnails/1.png">
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box"
+                        href="https://devpost.com/software/the-physical-engine" target="_blank"><img class="img-fluid"
+                            src="assets/img/thumbnails/1.png">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded"><span>Hackathon Project</span></div>
@@ -180,8 +193,8 @@
                             </div>
                         </div>
                     </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://github.com/concl/Factoreyes" target="_blank"><img
-                            class="img-fluid" src="assets/img/thumbnails/2.png">
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://github.com/concl/Factoreyes"
+                        target="_blank"><img class="img-fluid" src="assets/img/thumbnails/2.png">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded"><span>Hackathon Project</span></div>
@@ -189,20 +202,20 @@
                             </div>
                         </div>
                     </a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href = "https://github.com/workingSpear/HyperJump" target="_blank"><img
-                            class="img-fluid" src="assets/img/thumbnails/3.png">
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://github.com/LukeZengf/MealBucks"
+                        target="_blank"><img class="img-fluid" src="assets/img/thumbnails/8.png">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded"><span>2D Platformer Game</span></div>
-                                <div class="project-name"><span>HyperJump</span></div>
+                                <div class="project-category text-faded"><span>Project</span></div>
+                                <div class="project-name"><span>MealBucks</span></div>
                             </div>
                         </div>
                     </a></div>
             </div>
-            <div class="row no-gutters">
+            <!-- <div class="row no-gutters">
                 <div class="col-sm-6 col-lg-4"></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://github.com/concl/VeggieTools" target="_blank"><img
-                            class="img-fluid" src="assets/img/thumbnails/4.png">
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://github.com/concl/VeggieTools"
+                        target="_blank"><img class="img-fluid" src="assets/img/thumbnails/4.png">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded"><span>Project</span></div>
@@ -211,20 +224,52 @@
                         </div>
                     </a></div>
                 <div class="col-sm-6 col-lg-4"></div>
-            </div>
+            </div> -->
 
         </div>
     </section>
+    <section id="games" class="bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">My Experience With Game Development</h2>
+                    <hr class=" light my-4">
+                    <p>Recently, I've started to back into game development, using the Godot Engine. Below is a 2D game
+                        which I am currently working on. The game is a physics-based puzzle platformer with the main
+                        gimmick being the ability to teleport wherever you click. The two biggest inspirations of this
+                        game were Celeste and Portal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="p-0 bg-dark">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-sm-6 col-lg-4">
+                    <a class="portfolio-box" href="https://github.com/workingSpear/HyperJump"
+                        target="_blank"><img class="img-fluid" src="assets/img/thumbnails/3.png">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>2D Puzzle Platformer</span></div>
+                                <div class="project-name"><span>HyperJump</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="links" class="bg-dark">
         <div class="container">
             <div class="row">
-                <div class ="col-lg-12 text-center">
+                <div class="col-lg-12 text-center">
                     <h2 class="text-white section-heading">
                         Resume
                     </h2>
                     <iframe src="resume.pdf" width="100%" height="500px">
                     </iframe>
-                    <p class = "text-light">
+                    <p class="text-light">
                         Click <a href="resume.pdf" target="_blank">here</a> to view it in a new tab
                     </p>
                 </div>
@@ -232,7 +277,7 @@
 
         </div>
     </section>
-    <section id="contact" class = "bg-light text-dark">
+    <section id="contact" class="bg-light text-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 text-center mx-auto">
