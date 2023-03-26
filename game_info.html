@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2D Puzzle Platformer Showcase</title>
-  <!-- Add Bootstrap CSS -->
+  <title>HyperJump</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Add custom CSS -->
-<link rel="stylesheet" href="asseets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -17,22 +17,29 @@
   </nav>
 
   <div class="container">
-    <h1 class="text-center my-4">2D Puzzle Platformer Showcase</h1>
+    <h1 class="text-center my-4">HyperJump</h1>
     
     <div class="row">
       <div class="col-md-8">
         <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/your-video-id" title="Game Trailer" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/W3Xe89acbWQ" title="HyperJump Demo" allowfullscreen></iframe>
         </div>
       </div>
       <div class="col-md-4">
-        <h2>Game Title</h2>
-        <p>Description of the 2D puzzle platformer game...</p>
-        <h3>Features</h3>
+        <h2>HyperJump</h2>
+        <p>HyperJump is a 2D puzzle platformer where you control a robot that can teleport. It includes original music and art, and short but challenging physics-based puzzles.</p>
+        <h3>Game Mechanics</h3>
         <ul>
-          <li>Feature 1</li>
-          <li>Feature 2</li>
-          <li>Feature 3</li>
+          <li><strong>Teleport:</strong> The player is able to click on the screen to teleport to any location, while retaining their previous velocity relative to the world. Once the player teleports, they will have to touch the ground again before they can teleport again.</li>
+          <li><strong>Time Slow:</strong> The player can right click to slow down time anytime they would like to. Helpful for precise movements.</li>
+          <li><strong>Red Walls:</strong> If the line between the player and the teleport location crosses one of these walls, the player will not be able to teleport.</li>
+          <li><strong>Red Fields:</strong> While in a Red Field, the player is not able to teleport inside another or the same Red Field, however they are able to teleport out of it. The player can also teleport from outside to inside</li>
+          <li><strong>Blue Fields:</strong> These fields can have different effects based on the arrows that are present. If they have a rotation arrow, they will rotate the player's velocity 90 degrees. If they have a straight arrow, they change the direction of gravity.</li>
+          <li><strong>Flasks:</strong> When the player touches these, they regain their teleport, regardless of whether they have touched the ground or not. They respawn after a short period of time.</li>
+          <li><strong>Lasers:</strong> Touch them and you will have to restart the level.</li>
+          <li><strong>One Ways:</strong> The player can teleport through the side that is green, but not through the side that isn't.</li>
+          <li><strong>Cracked Red Walls:</strong> These walls can be broken if the player is traveling at a high enough velocity when colliding with it. Otherwise, they share the same properties as Red Walls</li>
+
         </ul>
       </div>
     </div>
